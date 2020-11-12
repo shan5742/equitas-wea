@@ -9,7 +9,8 @@ Clone the repo, install dependencies and run the application
 ```
 https://github.com/shan5742/equitas-weather-app.git
 cd equitas-weather-app.git
-npm run install
+npm run install-server
+npm run install-client
 npm run dev
 ```
 

@@ -17,6 +17,6 @@ app.get("/weather", async (req, res) => {
   res.status(200).send(response.data);
 });
 
-const port = 5000;
+const port = process.env.PORT | 5000;
 
 app.listen(port, () => `Server running on port ${port}`);
