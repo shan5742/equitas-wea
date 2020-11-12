@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./forecastOverview.css";
 import Wind from "../../images/wind.png";
-import { format, isToday, isTomorrow, isDate, parse } from "date-fns";
+import { getDate } from "../../helpers/getDate";
 
 export default function ForecastOverview(props) {
   const imgSrc = "https://www.metaweather.com/static/img/weather/png";
@@ -13,18 +13,7 @@ export default function ForecastOverview(props) {
     weather_state_name: current,
     wind_speed: breeze,
     weather_state_abbr: img,
-    id,
   } = props.forecast;
-
-  //   const handleDate = (date) => {
-  //     if (isToday(date.format())) {
-  //       return "Today";
-  //     } else if (isTomorrow(date.format())) {
-  //       return "Tomorrow";
-  //     } else {
-  //       return format(date.format());
-  //     }
-  //   };
 
   return (
     <div className="forecastItem">
@@ -35,7 +24,7 @@ export default function ForecastOverview(props) {
             src={`${imgSrc}/${img}.png`}
             alt="weather"
           />
-          <p className="date">{date}</p>
+          <p className="date">{getDate(date)}</p>
         </div>
         <p className="currentTemp">
           {Math.floor(temp)}
