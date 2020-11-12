@@ -5,6 +5,16 @@ const app = express();
 const axios = require("axios");
 app.use(cors());
 
+if (process.env.NODE_ENV === "production") {
+  // Express to serve production assets
+  app.use(express.static("client/build"));
+  // Express serve up index.html file if it doesn't recognize route
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
 app.get("/weather", async (req, res) => {
   let response;
   try {
