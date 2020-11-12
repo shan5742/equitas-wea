@@ -1,0 +1,76 @@
+.forecastItem {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px;
+  background-color: #31393c;
+  border: 1px solid #31393c;
+  border-radius: 32px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainSmallSection {
+  display: flex;
+  align-items: center;
+}
+
+.weatherIcon {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.date {
+  color: #fdca40;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.currentTemp {
+  color: white;
+  font-size: 72px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.currentTemp span {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.windContainer {
+  display: flex;
+  align-items: center;
+}
+
+.windIcon {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+}
+
+.windText {
+  color: #fdca40;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.weatherState {
+  font-size: 32px;
+  color: white;
+  font-style: italic;
+}
+
+.minMax {
+  color: white;
+  font-size: 20px;
+}
