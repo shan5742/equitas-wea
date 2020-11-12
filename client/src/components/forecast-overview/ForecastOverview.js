@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./forecastOverview.css";
 import Wind from "../../images/wind.png";
 import { getDate } from "../../helpers/getDate";
