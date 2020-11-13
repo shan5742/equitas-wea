@@ -2,7 +2,9 @@
 
 A React application for displaying the next 5 days weather in Belfast. Using Express server to consume the MetaWeather API.
 
-# Running locally
+The application is deployed via [Heroku](https://www.heroku.com), and the url is [https://equitas-weather.herokuapp.com/](https://equitas-weather.herokuapp.com/). However if you prefer to get this running locally just follow the instructions below.
+
+## Running locally
 
 Clone the repo, install dependencies and run the application
 
@@ -16,6 +18,6 @@ npm run dev
 
 Now you can view the application at [http://localhost:3000/](http://localhost:3000/)
 
-# Screenshots
+## Screenshots
 
 ![main screen](client/src/images/main.png)
