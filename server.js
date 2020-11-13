@@ -11,17 +11,16 @@ app.get("/weather", async (req, res) => {
     response = await axios.get(
       "https://www.metaweather.com/api/location/44544"
     );
-  } catch (e) {
+  } catch (error) {
     res.status(404).send();
   }
   res.status(200).send(response.data);
 });
 
+// Setup for serving assets from client build folder in production
 if (process.env.NODE_ENV === "production") {
-  // Express to serve production assets
   app.use(express.static(path.join(__dirname, "client", "build")));
-
-  // Express serve up index.html file if it doesn't recognize route
+  // Express to serve up index.html file if it doesn't recognize route
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });

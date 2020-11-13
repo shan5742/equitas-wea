@@ -1,7 +1,8 @@
 import React from "react";
 import "./forecastOverview.css";
-import Wind from "../../images/wind.png";
+import windIcon from "../../images/wind.png";
 import { getDate } from "../../helpers/getDate";
+import { roundDown } from "../../helpers/roundDown";
 
 export default function ForecastOverview(props) {
   const imgSrc = "https://www.metaweather.com/static/img/weather/png";
@@ -12,7 +13,7 @@ export default function ForecastOverview(props) {
     the_temp: temp,
     weather_state_name: current,
     wind_speed: breeze,
-    weather_state_abbr: img,
+    weather_state_abbr: imgIcon,
   } = props.forecast;
 
   return (
@@ -21,23 +22,23 @@ export default function ForecastOverview(props) {
         <div className="mainSmallSection">
           <img
             className="weatherIcon"
-            src={`${imgSrc}/${img}.png`}
+            src={`${imgSrc}/${imgIcon}.png`}
             alt="weather"
           />
           <p className="date">{getDate(date)}</p>
         </div>
         <p className="currentTemp">
-          {Math.floor(temp)}
+          {roundDown(temp)}
           <span>°C</span>
         </p>
       </div>
       <p className="weatherState">{current}</p>
       <div className="windContainer">
-        <img className="windIcon" src={Wind} alt="wind" />
-        <p className="windText">{Math.floor(breeze)}mph</p>
+        <img className="windIcon" src={windIcon} alt="wind" />
+        <p className="windText">{roundDown(breeze)}mph</p>
       </div>
       <p className="minMax">
-        min: {Math.floor(min)}°C | max: {Math.floor(max)}°C
+        min: {roundDown(min)}°C | max: {roundDown(max)}°C
       </p>
     </div>
   );
