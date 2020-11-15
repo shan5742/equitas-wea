@@ -16,6 +16,8 @@ npm run install-client
 npm run dev
 ```
 
+N ow you can view the application at [http://localhost:3000/](http://localhost:3000/)
+
 ## Running on Docker
 
 If you have docker and docker compose installed you can alternatively run this application with Docker on the `docker` branch. Simply run the following commands:
