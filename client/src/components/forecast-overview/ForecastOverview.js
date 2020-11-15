@@ -1,8 +1,8 @@
 import React from "react";
 import "./forecastOverview.css";
 import windIcon from "../../images/wind.png";
-import { getDate } from "../../helpers/getDate";
-import { roundDown } from "../../helpers/roundDown";
+import { getDate } from "../../helpers/getDate/getDate";
+import { roundDown } from "../../helpers/roundDown/roundDown";
 
 export default function ForecastOverview(props) {
   const imgSrc = "https://www.metaweather.com/static/img/weather/png";
