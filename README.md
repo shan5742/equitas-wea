@@ -18,7 +18,7 @@ npm run dev
 
 ## Running on Docker
 
-If you have docker and docker compose installed you can alternatively run this application with Docker. Simply run the following commands:
+If you have docker and docker compose installed you can alternatively run this application with Docker on the `docker` branch. Simply run the following commands:
 
 ```
 https://github.com/shan5742/equitas-weather-app.git
