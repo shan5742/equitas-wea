@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  server:
+    build: ./
+    ports:
+      - "5000:5000"
+    depends_on:
+      - client
+    container_name: equitas_server
+    networks:
+      equitas_network:
+
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    container_name: equitas_client
+    networks:
+      equitas_network:
+networks:
+  equitas_network:
+    external: true
