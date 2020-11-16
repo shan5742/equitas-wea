@@ -20,7 +20,15 @@ Now you can view the application at [http://localhost:3000/](http://localhost:30
 
 ## Running on Docker
 
-If you have docker and docker compose installed you can alternatively run this application with Docker on the `docker` branch. A number of commands from the `Makefile` make things a lot simpler:
+If you have docker and docker compose installed you can alternatively run this application with Docker on the `docker` branch. A number of commands from the `Makefile` make things a lot simpler. Start by cloning the repo.
+
+```
+git clone https://github.com/shan5742/equitas-weather-app.git
+cd equitas-weather-app.git
+git checkout docker
+```
+
+Now yu can use the make commands below:
 
 Build:
 
