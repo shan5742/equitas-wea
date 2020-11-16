@@ -16,18 +16,39 @@ npm run install-client
 npm run dev
 ```
 
+Now you can view the application at [http://localhost:3000/](http://localhost:3000/)
+
 ## Running on Docker
 
-If you have docker and docker compose installed you can alternatively run this application with Docker on the `docker` branch. Simply run the following commands:
+If you have docker and docker compose installed you can alternatively run this application with Docker on the `docker` branch. A number of commands from the `Makefile` make things a lot simpler. Start by cloning the repo.
 
 ```
-https://github.com/shan5742/equitas-weather-app.git
+git clone https://github.com/shan5742/equitas-weather-app.git
 cd equitas-weather-app.git
 git checkout docker
-docker-compose up
+```
+
+Now yu can use the make commands below:
+
+Build the application:
+
+```
+make build
+```
+
+Run the application:
+
+```
+make run
 ```
 
 Now you can view the application at [http://localhost:3000/](http://localhost:3000/)
+
+Shut the application down:
+
+```
+make down
+```
 
 ## Screenshots
 
